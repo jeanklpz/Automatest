@@ -6,7 +6,8 @@ import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 
 public class Answer implements Question<Boolean> {
-    private String question;
+
+    public String question;
 
     public Answer(String question) {
         this.question = question;
