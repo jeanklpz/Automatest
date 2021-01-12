@@ -13,9 +13,9 @@ public class Search implements Task {
 
     private String course;
 
-    //public Search(String course) {
-      //  this.course = course;
-    //}
+    public Search(String course) {
+        this.course = course;
+    }
 
     public static Search the(String course) {
         return Tasks.instrumented(Search.class, course);
@@ -23,7 +23,7 @@ public class Search implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Click.on(SearchCoursePage.BUTTON_UC),
-                Enter.theValue("Analista Bancolombia").into(SearchCoursePage.INPUT_COURSE),
+                Enter.theValue(course).into(SearchCoursePage.INPUT_COURSE),
                 Click.on(SearchCoursePage.BUTTON_SEARCH),
                 Click.on(SearchCoursePage.SELECT_COURSE)
                 );

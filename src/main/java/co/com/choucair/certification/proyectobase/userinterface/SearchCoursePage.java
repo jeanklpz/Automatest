@@ -4,7 +4,7 @@ import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
 
-public class SearchCoursePage extends PageObject {
+public class SearchCoursePage {
     public static final Target BUTTON_UC = Target.the("BUTTON FOR MODULE ACCESS").located(By.xpath("//*[@id=\"certificaciones\"]/div[1]/a"));
 
     public static final Target INPUT_COURSE = Target.the("INPUT FOR WRITE THE COURSE NAME").located(By.xpath("//*[@id=\"coursesearchbox\"]"));
